@@ -1,5 +1,7 @@
 package org.auto_backup.cli_config;
 
+import java.io.File;
+
 /**
  * ConfigParser
  */

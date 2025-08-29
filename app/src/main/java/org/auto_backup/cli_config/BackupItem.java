@@ -16,4 +16,34 @@ public class BackupItem {
 
 	public static final Consumer<String> Backup = (path) -> System.out.println(path);
 
+	public String getSource() {
+		return source;
+	}
+
+	public void setSource(String source) {
+		this.source = source;
+	}
+
+	public String getDestination() {
+		return destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
+	public static Consumer<String> getBackup() {
+		return Backup;
+	}
+
+	public boolean Backup() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'Backup'");
+	}
+
+	public boolean Populate() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'Populate'");
+	}
+
 }
