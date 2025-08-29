@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.auto_backup.YamlParseTest" tests="4" skipped="0" failures="2" errors="0" timestamp="2025-08-29T11:08:30.564Z" hostname="radon" time="0.015">
+  <properties/>
+  <testcase name="Deserialize()" classname="org.auto_backup.YamlParseTest" time="0.011">
+    <failure message="org.opentest4j.AssertionFailedError: s ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: s ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at app//org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at app//org.auto_backup.YamlParseTest.Deserialize(YamlParseTest.java:45)
+	at java.base@21.0.8/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.8/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.8/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="ReadFile()" classname="org.auto_backup.YamlParseTest" time="0.002">
+    <failure message="java.io.FileNotFoundException: ./test_files/yamlTestFile.yaml (No such file or directory)" type="java.io.FileNotFoundException">java.io.FileNotFoundException: ./test_files/yamlTestFile.yaml (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:152)
+	at java.base/java.util.Scanner.&lt;init&gt;(Scanner.java:645)
+	at org.auto_backup.YamlParseTest.ReadFile(YamlParseTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="WriteFile()" classname="org.auto_backup.YamlParseTest" time="0.001"/>
+  <testcase name="Serialize()" classname="org.auto_backup.YamlParseTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
