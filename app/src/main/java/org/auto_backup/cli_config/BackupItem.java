@@ -1,4 +1,4 @@
-package org.auto_backup;
+package org.auto_backup.cli_config;
 
 import java.util.function.Consumer;
 
