@@ -5,3 +5,5 @@ repo_type: private
 backup_items:
   - source: "~/.config/nvim/init.lua"
     destination: ".config/nvim/init.lua"
+  - source: "this"
+    destination: "that"

@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=./schema.json
+repo_path: "~/repo_test/"
+repo_url: "https://funny.com/repo"
+repo_type: private
+backup_items:
+  - source: "~/.config/nvim/init.lua"
+    destination: ".config/nvim/init.lua"
+  - source: "this"
+    destination: "that"

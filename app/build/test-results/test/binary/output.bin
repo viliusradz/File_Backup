@@ -1,0 +1,16 @@
+.# yaml-language-server: $schema=./schema.json
+repo_path: "~/dotfiles/"
+backup_items:
+0  - source: "~/.config/file-backup/schema.json"
+3    destination: ".config/file-backup/schema.json"
+0  - source: "~/.config/file-backup/schema.yaml"
+8    destination: ".config/file-backup/arch_config.yaml"
+.# yaml-language-server: $schema=./schema.json
+repo_path: "~/repo_test/"
+#repo_url: "https://funny.com/repo"
+repo_type: private
+backup_items:
+&  - source: "~/.config/nvim/init.lua"
+)    destination: ".config/nvim/init.lua"
+  - source: "this"
+    destination: "that"

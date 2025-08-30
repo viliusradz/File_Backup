@@ -7,10 +7,14 @@
 
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
+    id ("com.adarshr.test-logger") version "4.0.0"
     application
     java
 }
 
+apply {
+    plugin ("com.adarshr.test-logger")
+}
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -35,13 +39,50 @@ application {
     mainClass = "org.auto_backup.App"
 }
 
+
+tasks.register<Copy>("cpResources") {
+    // Task info
+    group = "Verification"
+    description = "Copies test resources"
+
+    // Copy logic
+    val dirFrom = "${projectDir}/src/test/resources"
+    var dirTo = "${getLayout().getBuildDirectory().get().asFile.absolutePath}/classes/test"
+    from (dirFrom)
+    into (dirTo)
+
+    // Loging
+    doFirst {
+        logger.info(dirFrom)
+        logger.info(dirTo)
+    }
+    doLast {
+        logger.info("Files copied SUCCESSFULLY")
+    }
+}
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
+    testLogging.showStandardStreams = true
+    dependsOn("cpResources")
     useJUnitPlatform()
 }
 
-tasks.register<Copy>(copyTests) {
-    from "${projectDir}/src/test/resources"
-    into "${buildDir}/classes/test"
+testlogger {
+    // theme = ThemeType.MOCHA
+    showExceptions = true
+    showStackTraces = true
+    showFullStackTraces = false
+    showCauses = true
+    slowThreshold = 2000
+    showSummary = true
+    showSimpleNames = false
+    showPassed = true
+    showSkipped = true
+    showFailed = true
+    showOnlySlow = false
+    showStandardStreams = false
+    showPassedStandardStreams = true
+    showSkippedStandardStreams = true
+    showFailedStandardStreams = true
+    logLevel = LogLevel.LIFECYCLE
 }
-processTestResources.dependsOn copyTestResources
