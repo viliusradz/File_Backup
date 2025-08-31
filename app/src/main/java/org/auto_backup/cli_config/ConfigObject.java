@@ -41,4 +41,17 @@ public class ConfigObject extends RepoConfig {
 		}
 		System.out.println("Files successfully copied to target directories");
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Git Path " + super.getPath() + '\n');
+		sb.append("Git URL " + super.getUrl() + '\n');
+		sb.append("Items: " + '\n');
+		for (var backupItem : backupItems) {
+			sb.append("\t- " + backupItem.getSource() + '\n');
+			sb.append("\t  " + backupItem.getDestination() + '\n');
+		}
+		return sb.toString();
+	}
 }

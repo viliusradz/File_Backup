@@ -5,6 +5,22 @@
 3    destination: ".config/file-backup/schema.json"
 0  - source: "~/.config/file-backup/schema.yaml"
 8    destination: ".config/file-backup/arch_config.yaml"
+Git Path ~/repo_test/
+Git URL https://funny.com/repo
+Items: 
+	- ~/.config/nvim/init.lua
+	  .config/nvim/init.lua
+	- this
+	  that
+
+Git Path ~/repo_test/
+Git URL https://funny.com/repo
+Items: 
+	- ~/.config/nvim/init.lua
+	  .config/nvim/init.lua
+	- this
+	  that
+
 .# yaml-language-server: $schema=./schema.json
 repo_path: "~/repo_test/"
 #repo_url: "https://funny.com/repo"
