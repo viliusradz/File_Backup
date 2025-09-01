@@ -9,7 +9,10 @@ import org.auto_backup.interfaces.Serialization;
 public class YamlParserMain {
 
 	public static void main(String[] args) {
-		GenericsTest test = new GenericsTest<ConfigObject>();
+		GenericsTest test = new GenericsTest<ConfigObject>() {
+		};
+		// GenericYamlParser parser = new GenericYamlParser() {
+		// };
 		System.out.println("HELLO WORLD");
 	}
 }

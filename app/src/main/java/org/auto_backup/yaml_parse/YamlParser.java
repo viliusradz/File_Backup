@@ -11,11 +11,12 @@ import org.auto_backup.interfaces.Serialization;
 /**
  * YamlParser
  */
-public class YamlParser<T> implements Serialization<T> {
+public class YamlParser<T> extends GenericYamlParser<T> {
 	// final Class<T> typeParameter;
 
 	public YamlParser() {
-		System.out.println("HI " + this.getClass().getGenericSuperclass().getTypeName());
+		System.out.println(
+				"HI " + ((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[0]);
 	}
 
 	@Override

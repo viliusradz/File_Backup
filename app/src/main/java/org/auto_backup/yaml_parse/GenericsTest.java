@@ -5,9 +5,15 @@ import java.lang.reflect.ParameterizedType;
 /**
  * GenericsTest
  */
-public class GenericsTest<T> {
+public abstract class GenericsTest<T> {
+
 	public GenericsTest() {
-		System.out.println(((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[0]);
+		// System.out.println(((ParameterizedType)
+		// this.getClass().getGenericInterfaces()[0]).getTypeName());
+		// System.out.println(this.getClass().getGenericInterfaces()[0].getClass().getGenericSuperclass().getTypeName());
+		// System.out.println((this.getClass().getGenericInterfaces()[0].getClass().getGenericSuperclass()));
+		System.out.println(((ParameterizedType) this.getClass().getGenericSuperclass()).getTypeName());
+		// System.out.println((this.getClass().getGenericSuperclass().getTypeName().));
 	}
 
 	Class<?> UnknownClass(Class<?> cl) {
