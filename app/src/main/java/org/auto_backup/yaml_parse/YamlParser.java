@@ -1,5 +1,6 @@
 package org.auto_backup.yaml_parse;
 
+import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 
 import org.auto_backup.cli_config.BackupItem;
@@ -11,6 +12,11 @@ import org.auto_backup.interfaces.Serialization;
  * YamlParser
  */
 public class YamlParser<T> implements Serialization<T> {
+	// final Class<T> typeParameter;
+
+	public YamlParser() {
+		System.out.println("HI " + this.getClass().getGenericSuperclass().getTypeName());
+	}
 
 	@Override
 	public String[] serialize(T data) {
@@ -26,5 +32,9 @@ public class YamlParser<T> implements Serialization<T> {
 		backupItems.add(new BackupItem("~/.config/nvim/init.lua", ".config/nvim/init.lua"));
 		backupItems.add(new BackupItem("this", "that"));
 		return (T) new ConfigObject(repoPath, repoUrl, backupItems);
+	}
+
+	private ArrayList<String> getVariables() {
+		return null;
 	}
 }

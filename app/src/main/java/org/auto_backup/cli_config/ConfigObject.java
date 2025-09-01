@@ -54,4 +54,17 @@ public class ConfigObject extends RepoConfig {
 		}
 		return sb.toString();
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof ConfigObject))
+			return false;
+
+		ConfigObject configObj = (ConfigObject) obj;
+		if (this.getUrl() == configObj.getUrl() &&
+				this.getPath() == configObj.getPath() &&
+				this.backupItems == configObj.backupItems)
+			return true;
+		return false;
+	}
 }

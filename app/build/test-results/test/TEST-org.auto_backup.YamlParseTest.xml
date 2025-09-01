@@ -1,42 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.auto_backup.YamlParseTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-08-31T11:58:08.044Z" hostname="radon" time="0.015">
+<testsuite name="org.auto_backup.YamlParseTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-09-01T07:36:17.956Z" hostname="radon" time="0.01">
   <properties/>
-  <testcase name="ReadFileAbsolute()" classname="org.auto_backup.YamlParseTest" time="0.004"/>
-  <testcase name="Deserialize()" classname="org.auto_backup.YamlParseTest" time="0.007"/>
+  <testcase name="ReadFileAbsolute()" classname="org.auto_backup.YamlParseTest" time="0.002"/>
+  <testcase name="Deserialize()" classname="org.auto_backup.YamlParseTest" time="0.003"/>
   <testcase name="ReadFileResource()" classname="org.auto_backup.YamlParseTest" time="0.002"/>
-  <testcase name="Serialize()" classname="org.auto_backup.YamlParseTest" time="0.0"/>
-  <system-out><![CDATA[# yaml-language-server: $schema=./schema.json
-repo_path: "~/dotfiles/"
-backup_items:
-  - source: "~/.config/file-backup/schema.json"
-    destination: ".config/file-backup/schema.json"
-  - source: "~/.config/file-backup/schema.yaml"
-    destination: ".config/file-backup/arch_config.yaml"
-Git Path ~/repo_test/
-Git URL https://funny.com/repo
-Items: 
-	- ~/.config/nvim/init.lua
-	  .config/nvim/init.lua
-	- this
-	  that
-
-Git Path ~/repo_test/
-Git URL https://funny.com/repo
-Items: 
-	- ~/.config/nvim/init.lua
-	  .config/nvim/init.lua
-	- this
-	  that
-
-# yaml-language-server: $schema=./schema.json
-repo_path: "~/repo_test/"
-repo_url: "https://funny.com/repo"
-repo_type: private
-backup_items:
-  - source: "~/.config/nvim/init.lua"
-    destination: ".config/nvim/init.lua"
-  - source: "this"
-    destination: "that"
+  <testcase name="Serialize()" classname="org.auto_backup.YamlParseTest" time="0.001"/>
+  <system-out><![CDATA[HI java.lang.Object
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
